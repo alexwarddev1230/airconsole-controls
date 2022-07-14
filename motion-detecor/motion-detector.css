@@ -1,0 +1,17 @@
+.motion-pad-background {
+  position: absolute;
+  width : 20%;
+  height: 80%;
+  top: 0%;
+  left: 0%;
+  border-radius: 13px;
+  border: 3px solid #9fcf02;
+}
+
+.motion-pad-ball {
+  position: absolute;
+  width : 20px;
+  height: 20px;
+  background: #d6ff00;
+  border-radius: 100%;
+}

@@ -18,6 +18,9 @@
     <script type="text/javascript" src="../button/button.js"></script>
     <link rel="stylesheet" href="../button/button.css">
     <script type="text/javascript" src="fake-airconsole.js"></script>
+    <script type="text/javascript" src="../motion-detecor/airconsole-motion-detector.js"></script>
+    <link rel="stylesheet" href="../motion-detecor/motion-detector.css">
+
     <style type="text/css">
       body {
         -ms-user-select: none;
@@ -144,9 +147,14 @@
           <div class="dpad-arrow dpad-arrow-right"></div>
         </div>
       </div>
-      <div id="a" class="button-300-150"><div class="button-a-text"><div class="button-text">A</div></div></div>
-      <div id="b" class="button-300-150"><div class="button-b-text"><div class="button-text">B</div></div></div>
+<!--      <div id="a" class="button-300-150"><div class="button-a-text"><div class="button-text">A</div></div></div>-->
+<!--      <div id="b" class="button-300-150"><div class="button-b-text"><div class="button-text">B</div></div></div>-->
+
+
+    <div class="motion-pad-background" id="motion-pad-test1">
+      <div class="motion-pad-ball"></div>
     </div>
+
     <script type="text/javascript">
       var airconsole = new AirConsole();
       new DPad("dpad", {
@@ -200,22 +208,35 @@
           airconsole.message(AirConsole.SCREEN, {"reset": "up"});
         }
       });
-      new Button("a", {
-        "down": function () {
-          airconsole.message(AirConsole.SCREEN, {"a": "down"});
-        },
-        "up": function () {
-          airconsole.message(AirConsole.SCREEN, {"a": "up"});
+      // new Button("a", {
+      //   "down": function () {
+      //     airconsole.message(AirConsole.SCREEN, {"a": "down"});
+      //   },
+      //   "up": function () {
+      //     airconsole.message(AirConsole.SCREEN, {"a": "up"});
+      //   }
+      // });
+      // new Button("b", {
+      //   "down": function () {
+      //     airconsole.message(AirConsole.SCREEN, {"b": "down"});
+      //   },
+      //   "up": function () {
+      //     airconsole.message(AirConsole.SCREEN, {"b": "up"});
+      //   }
+      // });
+      const shake_detector = new AirConsoleMotionDetector({
+        deadzone: 2,
+        sensitivity: 3,
+        invertX: false,
+        invertY: false,
+        horizontalOnly: false,
+        verticalOnly: false,
+        // Function to call when a shake was recognized
+        tiltMove: function(data) {
+          console.log("Movement Data: ", data);
         }
-      });
-      new Button("b", {
-        "down": function () {
-          airconsole.message(AirConsole.SCREEN, {"b": "down"});
-        },
-        "up": function () {
-          airconsole.message(AirConsole.SCREEN, {"b": "up"});
-        }
-      });
+      }, 'motion-pad-test1');
+
     </script>
   </body>
 </html>
