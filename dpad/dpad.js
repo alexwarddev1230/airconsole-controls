@@ -360,10 +360,10 @@ DPad.prototype.placeRelative = function(dx, dy) {
     return;
   }
   var style = me.relative.style;
-  style.left = (me.distance.x + dx) + "px";
-  style.right = (me.distance.x - dx) + "px";
-  style.top = (me.distance.y + dy) + "px";
-  style.bottom = (me.distance.y - dy) + "px";
+  style.left = (me.distance.x + dx) + "%";
+  style.right = (me.distance.x - dx) + "%";
+  style.top = (me.distance.y + dy) + "%";
+  style.bottom = (me.distance.y - dy) + "%";
 };
 
 /**

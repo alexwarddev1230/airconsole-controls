@@ -11,14 +11,17 @@
 }
 
 .dpad-relative-container {
+  background-size: contain;
   background-image: url('dpad-background.png');
 }
 
 .dpad-relative {
+  background-size: contain;
   background-image: url('dpad-relative.png');
 }
 
 .dpad-absolute-container {
+  background-size: contain;
   background-image: url('dpad-absolute.png');
 }
 
@@ -40,18 +43,22 @@
 
 /* Relative arrows */
 .dpad-relative .dpad-arrow-down {
+  background-size: contain;
   background-image: url('dpad-arrow-down.png');
 }
 
 .dpad-relative .dpad-arrow-left {
+  background-size: contain;
   background-image: url('dpad-arrow-left.png');
 }
 
 .dpad-relative .dpad-arrow-right {
+  background-size: contain;
   background-image: url('dpad-arrow-right.png');
 }
 
 .dpad-relative .dpad-arrow-up {
+  background-size: contain;
   background-image: url('dpad-arrow-up.png');
 }
 
@@ -61,18 +68,22 @@
 }
 
 .dpad-absolute .dpad-arrow-up {
+  background-size: contain;
   background-image: url('dpad-absolute-up.png');
 }
 
 .dpad-absolute .dpad-arrow-down {
+  background-size: contain;
   background-image: url('dpad-absolute-down.png');
 }
 
 .dpad-absolute .dpad-arrow-left {
+  background-size: contain;
   background-image: url('dpad-absolute-left.png');
 }
 
 .dpad-absolute .dpad-arrow-right {
+  background-size: contain;
   background-image: url('dpad-absolute-right.png');
 }
 
